@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Campus Recruitment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <h1 style="font-size: 40px; margin-bottom: 16px;">Campus Recruitment System</h1>
+            <p style="font-size: 18px; opacity: 0.9; margin-bottom: 40px;">Connect students with top recruiters.
+                Streamline hiring with our advanced portal.</p>
+
+            <div style="display: grid; gap: 20px;">
+                <div class="card"
+                    style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white;">
+                    <h3 style="margin-bottom: 8px;">For Students</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Get discovered by top companies and apply for your dream
+                        jobs with ease.</p>
+                </div>
+                <div class="card"
+                    style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white;">
+                    <h3 style="margin-bottom: 8px;">For Recruiters</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Hire the best talent from various departments through our
+                        streamlined platform.</p>
+                </div>
+            </div>
+        </div>
+        <div class="auth-right">
+            <div class="auth-card animate-fade-in">
+                <div class="tabs" id="authTabs">
+                    <div class="tab active" data-role="student">Student</div>
+                    <div class="tab" data-role="recruiter">Recruiter</div>
+                    <div class="tab" data-role="admin">Admin</div>
+                </div>
+
+                <h2 style="margin-bottom: 8px;" id="loginTitle">Student Sign In</h2>
+                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 14px;">Enter your credentials to
+                    access your account.</p>
+
+                <form id="loginForm">
+                    <input type="hidden" id="loginRole" value="student">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <div style="text-align: right; margin-top: 8px;">
+                            <a href="#" style="font-size: 13px; color: var(--primary); text-decoration: none;">Forgot
+                                Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+
+                    <div id="adminHint"
+                        style="margin-top: 16px; font-size: 13px; color: var(--text-muted); text-align: center; display: none;">
+                        Admin Login: <strong>admin@campus.com</strong> / <strong>admin123</strong>
+                    </div>
+
+                    <div id="registerLink" style="text-align: center; margin-top: 24px; font-size: 14px;">
+                        <span style="color: var(--text-muted);">New here?</span>
+                        <a href="register.html"
+                            style="color: var(--primary); font-weight: 600; text-decoration: none; margin-left: 4px;">Register
+                            Now</a>
+                    </div>
+                </form>
+
+                <div id="errorMessage"
+                    style="margin-top: 16px; color: var(--danger); font-size: 14px; text-align: center; display: none;">
+                    Invalid credentials or role mismatch.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
